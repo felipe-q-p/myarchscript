@@ -27,7 +27,7 @@ echo /etc/hosts "127.0.0.1      localhost
 127.0.1.1      $hostname.localdomain      $hostname"
 passwd
 pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools linux-headers
-grub-install --target=i386-pc /dev/sda
+grub-install --target=i386-pc /dev/vda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 reboot
