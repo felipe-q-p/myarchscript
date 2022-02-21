@@ -7,7 +7,6 @@ mount /dev/vda1 /mnt
 pacstrap /mnt base linux linux-firmware base-devel nano
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-cat /etc/locale.gen
 nano /etc/locale.gen
 locale-gen
 echo "choose a language from the list above"
