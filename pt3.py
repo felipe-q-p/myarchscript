@@ -11,7 +11,6 @@ else:
 user = str(input('Choose a user name: '))
 os.system(f'useradd -m -G wheel {user}')
 os.system(f'passwd {user}')
-os.system('echo %wheel ALL=ALL(ALL:AL) ALL >> /etc/sudoers')
 driver = str(input("Are you using Intel, AMD or Nvidia? ")).strip().upper()
 if driver == 'INTEL':
   os.system('sudo pacman -S xf86-video-intel')
@@ -28,5 +27,8 @@ os.system('sudo pacman -S --needed terminology')
 os.system('pacman -S flatpak leafpad')
 os.system('pacman -S archlinux-wallpaper')
 os.system('flatpak install io.gitlab.librewolf-community')
+os.system('systemctl enable lightdm')
+os.system('nano /etc/sudoers')
 reboot = str(input('Reboot now? [S/N]')).strip().upper()
+if reboot == 'S':
 os.system('reboot')
