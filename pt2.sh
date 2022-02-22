@@ -9,7 +9,7 @@ pwd
 echo "choose a keymap from the list above"
 read keymap
 echo "you entered $keymap"
-echo KEYMAP=$keymap>> /etc/vconsole.conf
+echo KEYMAP=$keymap >> /etc/vconsole.conf
 echo "choose a hostname"
 read hostname
 echo "you entered $hostname"
