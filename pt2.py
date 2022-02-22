@@ -18,4 +18,6 @@ os.system('passwd')
 os.system('pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools linux-headers')
 os.system('grub-install --target=i386-pc /dev/vda')
 os.system('grub-mkconfig -o /boot/grub/grub.cfg')
-print("Please exit and reboot your system")
+restart = input("Restart now? [Y/N]").strip().upper
+if restart == 'Y':
+  os.system('reboot')
