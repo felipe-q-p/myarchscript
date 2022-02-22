@@ -31,4 +31,4 @@ os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
 reboot = str(input('Reboot now? [S/N]')).strip().upper()
 if reboot == 'S':
-os.system('reboot')
+  os.system('reboot')
