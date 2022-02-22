@@ -8,12 +8,13 @@ mount /dev/vda1 /mnt
 pacstrap /mnt base linux linux-firmware base-devel nano
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-nano /etc/locale.gen
 echo "choose a language from the list above"
 read lang
 echo "you entered $lang"
 echo LANG=$lang >> /etc/locale.conf
+nano /etc/locale.gen
 locale-gen
+pwd
 echo "choose a keymap from the list above"
 read keymap
 echo "you entered $keymap"
