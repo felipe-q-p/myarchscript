@@ -9,7 +9,7 @@ else:
   os.system('systemctl enable NetworkManager')
   os.system('systemctl start NetworkManager')
 user = str(input('Choose a user name: '))
-os.system(f'useradd -m -G whell {user}')
+os.system(f'useradd -m -G wheel {user}')
 os.system(f'passwd {user}')
 os.system('echo %wheel ALL=ALL(ALL:AL) ALL >> /etc/sudoers')
 driver = str(input("Are you using Intel, AMD or Nvidia? ")).strip().upper()
