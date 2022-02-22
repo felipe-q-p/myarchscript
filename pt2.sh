@@ -21,3 +21,4 @@ passwd
 pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools linux-headers
 grub-install --target=i386-pc /dev/vda
 grub-mkconfig -o /boot/grub/grub.cfg
+echo "Please exit and reboot your system"
