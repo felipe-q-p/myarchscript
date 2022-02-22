@@ -5,7 +5,7 @@ from time import sleep
 lang =  str(input("choose a language: "))
 os.system(f'echo you entered {lang}')
 os.system(f'echo LANG={lang} >> /etc/locale.conf')
-os.system(f'echo LANG={lang} >> /etc/locale.gen')
+os.system(f'echo {lang} >> /etc/locale.gen')
 os.system('pwd')
 os.system('cat /etc/locale.conf')
 sleep(5)
