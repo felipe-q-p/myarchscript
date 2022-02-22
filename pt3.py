@@ -1,6 +1,6 @@
 import os
 
-op = int(input("Are you using wifi?[S/N] ")).strip().upper()
+op = str(input("Are you using wifi?[S/N] ")).strip().upper()
 if op == 'S':
   os.system('systemctl enable NetworkManager')
   os.system('systemctl start NetworkManager')
