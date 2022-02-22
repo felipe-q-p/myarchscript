@@ -10,3 +10,4 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 git clone https://github.com/felipe-q-p/myarchscript
 pacman -S python3 python-pip
+python3 /myarchscript/pt2.py
