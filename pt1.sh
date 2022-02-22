@@ -13,6 +13,7 @@ read lang
 echo "you entered $lang"
 echo LANG=$lang >> /etc/locale.conf
 nano /etc/locale.gen
+cd /mnt
 locale-gen
 pwd
 echo "choose a keymap from the list above"
