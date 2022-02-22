@@ -1,7 +1,8 @@
-echo "choose a language from the list above"
-read lang
-echo "you entered $lang"
-echo LANG=$lang >> /etc/locale.conf
+import os
+
+lang =  str(input("choose a language from the list above"))
+os.system(f'echo you entered {lang}')
+echo LANG=lang >> /etc/locale.conf
 nano /etc/locale.gen
 cd /mnt
 locale-gen
