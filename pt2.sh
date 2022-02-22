@@ -1,3 +1,3 @@
-os.system('pacman -S python3 python-pip')
-os.system('python3 /myarchscript/pt2.py')
+pacman -S python3 python-pip
+python3 /myarchscript/pt2.py
 python /myarchscript/pt2.py
