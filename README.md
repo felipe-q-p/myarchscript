@@ -1,4 +1,5 @@
 # Myarchscript
+## Important: This script only works for DOS machines. EUFI is not supported yet
 Myarchscript is a project which helps users to install Arch Linux. This project is not an entirely new distribution and mantains the majority of the Arch Linux standard settings, such as the command line based installation, however easier due to the automation scripts, written in python and shell script. Some programs, such as the enlightenment window manager, flatpak, leafpad and librewolf browser are included.
 ## Instructions:
 1. Firstly, you need the Arch Linux ISO, which can be downloaded on Arch Linux official site.
