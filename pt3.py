@@ -29,6 +29,7 @@ os.system('pacman -S archlinux-wallpaper')
 os.system('flatpak install io.gitlab.librewolf-community')
 os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
+os.system('nano /etc/locale.gen')
 reboot = str(input('Reboot now? [S/N]')).strip().upper()
 if reboot == 'S':
   os.system('reboot')
