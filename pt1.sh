@@ -8,4 +8,4 @@ mount /dev/vda1 /mnt
 pacstrap /mnt base linux linux-firmware base-devel nano git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-
+git clone https://github.com/felipe-q-p/myarchscript
