@@ -10,7 +10,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 nano /etc/locale.gen
 echo "choose a language from the list above"
-read langlocale-gen
+read lang
 echo "you entered $lang"
 echo LANG=$lang >> /etc/locale.conf
 locale-gen
