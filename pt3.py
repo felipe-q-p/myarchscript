@@ -25,7 +25,7 @@ os.system('flatpak install io.gitlab.librewolf-community')
 os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
 os.system('nano /etc/locale.gen')
-os.system('mv /myarchscript/kitty.conf .config/kitty')
+os.system('mv /myarchscript/kitty.conf /kitty')
 reboot = str(input('Reboot now? [S/N]')).strip().upper()
 if reboot == 'S':
   os.system('reboot')
