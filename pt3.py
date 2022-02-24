@@ -20,7 +20,7 @@ elif driver == 'NVIDIA':
 os.system('sudo pacman -S xorg-server xorg-xinit')
 os.system('sudo pacman -S --needed lightdm lightdm-gtk-greeter')
 os.system('sudo pacman -S efl enlightenment')
-os.system('pacman -S archlinux-wallpaper flatpak terminology kitty baobab gparted gtkhash ephoto rage ecrire')
+os.system('pacman -S archlinux-wallpaper flatpak terminology kitty baobab gparted ephoto rage ecrire')
 os.system('flatpak install io.gitlab.librewolf-community')
 os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
