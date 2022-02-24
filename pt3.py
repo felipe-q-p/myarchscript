@@ -19,15 +19,13 @@ elif driver == 'NVIDIA':
 
 os.system('sudo pacman -S xorg-server xorg-xinit')
 os.system('sudo pacman -S --needed lightdm lightdm-gtk-greeter')
-os.system('sudo pacman -S efl')
-os.system('sudo pacman -S enlightenment')
-os.system('sudo pacman -S --needed terminology')
-os.system('pacman -S flatpak leafpad')
-os.system('pacman -S archlinux-wallpaper')
+os.system('sudo pacman -S efl enlightenment')
+os.system('pacman -S archlinux-wallpaper flatpak terminology kitty baobab gparted gtkhash ephoto rage ecrire')
 os.system('flatpak install io.gitlab.librewolf-community')
 os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
 os.system('nano /etc/locale.gen')
+os.system('mv /myarchscript/kitty.conf .config/kitty')
 reboot = str(input('Reboot now? [S/N]')).strip().upper()
 if reboot == 'S':
   os.system('reboot')
