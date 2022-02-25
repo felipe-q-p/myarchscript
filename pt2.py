@@ -33,6 +33,4 @@ os.system('pacman -S grub networkmanager network-manager-applet dialog wireless_
 os.system('grub-install --target=i386-pc /dev/vda')
 os.system('grub-mkconfig -o /boot/grub/grub.cfg')
 os.system('systemctl enable NetworkManager')
-restart = input("Restart now? [Y/N]").strip().upper
-if restart == 'Y':
-  os.system('reboot')
+print('\033[1;94m You can exit and reboot now. The second part is finished.')
