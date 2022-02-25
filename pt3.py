@@ -1,4 +1,5 @@
 import os
+from time import sleep
 
 op = str(input("Are you using wifi?[S/N] ")).strip().upper()
 if op == 'S':
@@ -12,14 +13,18 @@ os.system(f'passwd {user}')
 driver = str(input("Are you using Intel, AMD or Nvidia? ")).strip().upper()
 if driver == 'INTEL':
   print('\033[1;91mInstalling Intel drivers')
+  sleep(2)
   os.system('sudo pacman -S xf86-video-intel')
 elif driver == 'AMD':
   print('\033[1;91mInstalling AMD drivers')
+    sleep(2)
   os.system('sudo pacman -S xf86-video-amdgpu')
 elif driver == 'NVIDIA':
   print('\033[1;91mInstalling Nvidia drivers')
+    sleep(2)
   os.system('sudo pacman -S nvidia nvidia-utils')
-
+print('\033[1;91mInstalling Applications')
+  sleep(2)
 os.system('sudo pacman -S xorg-server xorg-xinit')
 os.system('sudo pacman -S --needed lightdm lightdm-gtk-greeter')
 os.system('sudo pacman -S efl enlightenment')
