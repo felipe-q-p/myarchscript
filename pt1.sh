@@ -1,3 +1,4 @@
+echo -e '\033[0;32;1mWelcome to myarchscipt installation helper!!! Thank you for trying!\033[7m' 
 echo "enter the name for the partition (ex: /dev/sdd): "
 read disk
 echo "you entered $disk"
