@@ -11,10 +11,13 @@ os.system(f'useradd -m -G wheel {user}')
 os.system(f'passwd {user}')
 driver = str(input("Are you using Intel, AMD or Nvidia? ")).strip().upper()
 if driver == 'INTEL':
+  print('\033[1;91mInstalling Intel drivers')
   os.system('sudo pacman -S xf86-video-intel')
 elif driver == 'AMD':
+  print('\033[1;91mInstalling AMD drivers')
   os.system('sudo pacman -S xf86-video-amdgpu')
 elif driver == 'NVIDIA':
+  print('\033[1;91mInstalling Nvidia drivers')
   os.system('sudo pacman -S nvidia nvidia-utils')
 
 os.system('sudo pacman -S xorg-server xorg-xinit')
@@ -25,7 +28,7 @@ os.system('flatpak install io.gitlab.librewolf-community')
 os.system('systemctl enable lightdm')
 os.system('nano /etc/sudoers')
 os.system('nano /etc/locale.gen')
-os.system('mv /myarchscript/kitty.conf ~/.config/kitty')
-reboot = str(input('Reboot now? [S/N]')).strip().upper()
-if reboot == 'S':
+os.system('cp /myarchscript/kitty.conf ~/.config/kitty')
+reboot = str(input('Reboot now? [Y/N]')).strip().upper()
+if reboot == 'Y':
   os.system('reboot')
