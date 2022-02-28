@@ -1,7 +1,7 @@
 
 import os
 from time import sleep
-from pt1 import *
+
 
 lang =  str(input("choose a language: "))
 os.system(f'echo you entered {lang}')
@@ -31,6 +31,7 @@ sleep(5)
 
 os.system('passwd')
 os.system('pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools linux-headers')
+part = str(input('Choose a partition for the boot loader: ')).strip()
 os.system(f'grub-install --target=i386-pc {part}')
 os.system('grub-mkconfig -o /boot/grub/grub.cfg')
 os.system('systemctl enable NetworkManager')
