@@ -4,8 +4,8 @@ read disk
 echo "you entered $disk"
 cfdisk $disk
 fdisk -l
-mkfs.ext4 /dev/vda1
-mount /dev/vda1 /mnt
+mkfs.ext4 /dev/sda1
+mount /dev/sda1 /mnt
 pacstrap /mnt base linux linux-firmware base-devel nano git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
