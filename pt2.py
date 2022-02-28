@@ -1,6 +1,7 @@
 
 import os
 from time import sleep
+from pt1 import *
 
 lang =  str(input("choose a language: "))
 os.system(f'echo you entered {lang}')
