@@ -1,6 +1,6 @@
 import os
 os.system('echo -e "\033[0;32;1mWelcome to myarchscipt installation helper!!! Thank you for trying!\033[7m"' )
-disk = str(input("enter the name for the partition (ex: /dev/sdd): ")).strip()
+part = str(input("enter the name for the partition (ex: /dev/sdd): ")).strip()
 print(f"you entered {part}")
 os.system(f'cfdisk {part}')
 os.system('fdisk -l')
