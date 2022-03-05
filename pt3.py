@@ -24,7 +24,7 @@ elif driver == 'NVIDIA':
   sleep(2)
   os.system('sudo pacman -S nvidia nvidia-utils')
 print('\033[1;91mInstalling Applications')
-  sleep(2)
+sleep(2)
 os.system('sudo pacman -S xorg-server xorg-xinit')
 os.system('sudo pacman -S --needed lightdm lightdm-gtk-greeter')
 os.system('sudo pacman -S efl enlightenment')
