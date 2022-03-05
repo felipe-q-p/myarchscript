@@ -2,7 +2,7 @@
 import os
 from time import sleep
 
-
+os.system('systemctl start networkmanager')
 lang =  str(input("choose a language: "))
 os.system(f'echo you entered {lang}')
 os.system(f'echo LANG={lang} >> /etc/locale.conf')
