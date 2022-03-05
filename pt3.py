@@ -17,11 +17,11 @@ if driver == 'INTEL':
   os.system('sudo pacman -S xf86-video-intel')
 elif driver == 'AMD':
   print('\033[1;91mInstalling AMD drivers')
-    sleep(2)
+  sleep(2)
   os.system('sudo pacman -S xf86-video-amdgpu')
 elif driver == 'NVIDIA':
   print('\033[1;91mInstalling Nvidia drivers')
-    sleep(2)
+  sleep(2)
   os.system('sudo pacman -S nvidia nvidia-utils')
 print('\033[1;91mInstalling Applications')
   sleep(2)
