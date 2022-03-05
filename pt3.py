@@ -1,7 +1,8 @@
 import os
 from time import sleep
 
-op = str(input("\033[1;94mAre you using wifi?[S/N] ")).strip().upper()
+print('\033[1;94m')
+op = str(input("Are you using wifi?[S/N] ")).strip().upper()
 if op == 'S':
   os.system('systemctl start NetworkManager')
   os.system('nmtui')
@@ -10,7 +11,8 @@ else:
 user = str(input('Choose a user name: '))
 os.system(f'useradd -m -G wheel {user}')
 os.system(f'passwd {user}')
-driver = str(input("\033[1;96mAre you using Intel, AMD or Nvidia? ")).strip().upper()
+print('\033[1;96m')
+driver = str(input("Are you using Intel, AMD or Nvidia? ")).strip().upper()
 if driver == 'INTEL':
   print('\033[1;91mInstalling Intel drivers')
   sleep(2)
