@@ -1,1 +1,1 @@
-python3 /myarchscript/pt3.py 
+ python3 /myarchscript/pt3.py 
