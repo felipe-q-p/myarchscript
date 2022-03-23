@@ -1,1 +1,11 @@
-
+import os
+os.system('echo -e "\033[0;32;1mWelcome to myarchscipt installation helper!!! Thank you for trying!\033[7m"' )
+part = str(input("enter the name for the partition (ex: /dev/sdd): ")).strip()
+print(f"you entered {part}")
+os.system(f'cfdisk {part}')
+os.system('fdisk -l')
+os.system(f'mkfs.ext4 {part}1')
+os.system(f'mount {part}1 /mnt')
+os.system('pacstrap /mnt base linux linux-firmware base-devel nano git networkmanager')
+os.system('genfstab -U /mnt >> /mnt/etc/fstab')
+os.system('arch-chroot /mnt')
