@@ -2,6 +2,7 @@
 import os
 from time import sleep
 
+os.system('systemctl start networkmanager')
 lang =  str(input("choose a language: "))
 os.system(f'echo you entered {lang}')
 os.system(f'echo LANG={lang} >> /etc/locale.conf')
@@ -30,9 +31,11 @@ sleep(5)
 
 os.system('passwd')
 os.system('pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools linux-headers')
-os.system('grub-install --target=i386-pc /dev/vda')
+print('\033[1;95m')
+part = str(input('Choose a partition for the boot loader: ')).strip()
+print("Installing grub...")
+os.system(f'grub-install --target=i386-pc {part}')
 os.system('grub-mkconfig -o /boot/grub/grub.cfg')
 os.system('systemctl enable NetworkManager')
-restart = input("Restart now? [Y/N]").strip().upper
-if restart == 'Y':
-  os.system('reboot')
+print('\033[1;94m You can exit and reboot now. The second part is finished.')
+os.system('exit')
