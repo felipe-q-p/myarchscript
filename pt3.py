@@ -2,7 +2,7 @@ import os
 from time import sleep
 
 print('\033[1;94m')
-op = str(input("Are you using wifi?[S/N] ")).strip().upper()
+op = str(input("Are you using wifi?[Y/N] ")).strip().upper()
 if op == 'S':
   os.system('systemctl start NetworkManager')
   os.system('nmtui')
