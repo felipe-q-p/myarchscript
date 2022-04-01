@@ -29,13 +29,13 @@ print('\033[1;92mInstalling Applications')
 sleep(2)
 os.system('sudo pacman -S xorg-server xorg-xinit')
 de = str(input('Choose a Desktop Environment [Enlightenment, Gnome, Plasma, Xfce]')).strip().lower()
-if de == 'enlightenment'
+if de == 'enlightenment':
   os.system('sudo pacman -S --needed lightdm lightdm-gtk-greeter')
   os.system('sudo pacman -S efl enlightenment')
   os.system('pacman -S archlinux-wallpaper flatpak terminology kitty baobab evince gparted mpv neofetch htop thunderbird gnome-calculator gthumb libreoffice ecrire')
   os.system('flatpak install io.gitlab.librewolf-community')
   os.system('systemctl enable lightdm')
-if de == 'gnome'
+if de == 'gnome':
   os.system('sudo pacman -S gdm')
   os.system('sudo pacman -S gnome gnome-terminal nautilus gnome-tweaks gnome-layout-switcher gnome-control-center gnome-backgrounds adwaita-icon-theme')
   os.system('pacman -S archlinux-wallpaper flatpak kitty baobab evince gparted mpv neofetch htop thunderbird gnome-calculator gthumb libreoffice gedit')
