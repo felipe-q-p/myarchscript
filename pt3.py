@@ -41,7 +41,7 @@ elif de == 'gnome':
   os.system('pacman -S archlinux-wallpaper flatpak kitty baobab evince gparted mpv neofetch htop thunderbird gnome-calculator gthumb libreoffice gedit')
   os.system('flatpak install io.gitlab.librewolf-community')
   os.system('systemctl enable gdm')
- elif de == 'qtile':
+elif de == 'qtile':
   os.system('pacman -S lightdm lightdm-gtk-greeter')
   os.system('pacman -S qtile lxappearence nitrogen xfce4-terminal picom thunar firefox archlinux-wallpapers')
 os.system('sudo cp /myarchscript/kitty.conf /home/felipe/.config/kitty')
