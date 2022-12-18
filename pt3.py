@@ -32,7 +32,7 @@ de = str(input('Choose a Desktop Environment [Enlightenment, Gnome, Plasma, Xfce
 if de == 'enlightenment':
   os.system('pacman -S --needed lightdm lightdm-gtk-greeter')
   os.system('pacman -S efl enlightenment')
-  os.system('pacman -S archlinux-wallpaper flatpak terminology kitty baobab evince gparted mpv neofetch htop thunderbird gnome-calculator gthumb libreoffice ecrire')
+  os.system('pacman -S archlinux-wallpaper flatpak gnome-terminal falkon baobab evince gparted mpv neofetch htop thunderbird gnome-calculator gthumb libreoffice ecrire')
   os.system('flatpak install io.gitlab.librewolf-community')
   os.system('systemctl enable lightdm')
 elif de == 'gnome':
